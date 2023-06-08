@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.views.generic.base import TemplateView
 from django.views.generic.list import ListView
 from .models import Games , Special_Games
 
@@ -13,5 +12,5 @@ class shop_view(ListView) :
         Context2 = {'Spgames' : Specgame}
 
         combined_context = {**Context1 , **Context2}
-
         return render(request , 'index.html' , combined_context)
+    pass

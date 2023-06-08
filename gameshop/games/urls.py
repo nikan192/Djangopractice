@@ -1,6 +1,4 @@
-from django.urls import path , include
-from django.conf.urls.static import static
-from django.conf import Settings
+from django.urls import path
 from .views import shop_view
 
 urlpatterns = [
