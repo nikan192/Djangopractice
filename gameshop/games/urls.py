@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import shop_view
+from . import views
 
 urlpatterns = [
-    path('newgames/' , shop_view.as_view() , name='Gameshop')    
+    path('newgames/' , views.shop_view.as_view() , name='Gameshop'),
+    path('newgames/<str:pk>/' , views.pro_detail.as_view() , name='Gamepage')    
 ]

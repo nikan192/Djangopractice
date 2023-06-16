@@ -4,7 +4,7 @@ from django.utils import timezone
 
 class Games(models.Model) :
 
-    imagie = models.ImageField(upload_to='gamecovers/')
+    image = models.ImageField(upload_to='gamecovers/')
 
     name = models.CharField(max_length=24)
     
@@ -41,7 +41,7 @@ class Games(models.Model) :
 
 class Special_Games(models.Model) :
 
-    imagie = models.ImageField(upload_to='gamecovers/')
+    image = models.ImageField(upload_to='gamecovers/')
 
     name = models.CharField(max_length=24)
     

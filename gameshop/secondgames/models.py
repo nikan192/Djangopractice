@@ -5,7 +5,7 @@ from django.utils import timezone
 
 class Gametest(models.Model) :
 
-    imagie = models.ImageField(upload_to='gamecovers/')
+    image = models.ImageField(upload_to='gamecovers/')
 
     name = models.CharField(max_length=24)
 

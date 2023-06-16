@@ -13,4 +13,5 @@ class test_view(ListView) :
         Context = {'testgames' : gameobj}
 
         return render(request , 'index.html' , Context)
+    
     pass

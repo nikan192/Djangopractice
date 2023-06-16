@@ -1,26 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    {%for item in Games%}
-        <h1>{{item}}</h1>
+{% extends "base.html" %}
+
+
+    {% block content %}
+        {%for game in Games%}
+            <button type="button" class="btn btn-primary"><a href="{% url 'Gamepage' game.id %}" style = "color :goldenrod">  {{game.name}} </a></button>
+            <img src = "{{ game.image.url }}" alt = "{{ game.name }}">
         {% endfor %}
-
-    {%for item in Games.image%}
-        <h1>{{item}}</h1>
-        {%endfor%}
-
-    {%for item in Spgames%}
-        <h1>{{item}}</h1>
-        {%endfor%}
-
-    {%for item in testgames%}
-        <h1> {{item}} </h1>
-        {% endfor %}
-</body>
-</html>
+        <br><br>
+    {% endblock content %}
