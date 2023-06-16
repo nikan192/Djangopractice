@@ -1,15 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>{{game_d.name}}</p>
-    <img src = "{{ game_d.image.url }}" alt = "{{ game_d.name }}">
-    <p>{{game_d.price}}</p>
-    <p>{{game_d.description}}</p>
-    <p>{{game_d.created_at}}</p>
-</body>
-</html>
+{% extends 'base.html'%}
+    {% block content %}
+
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{ game_d.image.url }}" class="img-fluid rounded-start" alt="{{ game_d.name }}">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{game_d.name}}</h5>
+            <p class="card-text">{{game_d.description}}</p>
+            <p class="card-text"><small class="text-body-secondary">{{game_d.created_at}}</small></p>
+            <p class="card-text"><small class="text-body-secondary">{{game_d.updated_at}}</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock content%}
