@@ -1,0 +1,12 @@
+body{
+    direction: rtl!important;
+    justify-content: center!important;
+    align-items: center!important;
+    background: rgb(0 , 0 , 0) !important;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
