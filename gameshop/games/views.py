@@ -14,7 +14,7 @@ class shop_view(ListView) :
         combined_context = {**Context1 , **Context2}
         return render(request , 'index.html' , combined_context)
     
-class pro_detail(DetailView) :
+class pro_detail_game(DetailView) :
     model = Games
     template_name = 'mobilelist.html'
     context_object_name : str = 'game_d'

@@ -10,8 +10,9 @@
           <div class="card-body">
             <h5 class="card-title">{{game_d.name}}</h5>
             <p class="card-text">{{game_d.description}}</p>
-            <p class="card-text"><small class="text-body-secondary">{{game_d.created_at}}</small></p>
-            <p class="card-text"><small class="text-body-secondary">{{game_d.updated_at}}</small></p>
+            <p class="card-text"><small class="text-body-secondary"> {{game_d.created_at}} </small></p>
+            <p class="card-text"><small class="text-body-secondary"> {{game_d.updated_at}} </small></p>
+            <a href="{% url 'Gameedit' game_d.id %}"><button type="button" class="btn btn-warning">edit</button></a>
           </div>
         </div>
       </div>

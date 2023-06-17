@@ -1,12 +1,19 @@
 body{
-    direction: rtl!important;
-    justify-content: center!important;
-    align-items: center!important;
-    background: rgb(0 , 0 , 0) !important;
+  background: rgb(0, 0, 0) !important;
+  direction: rtl !important;
 }
+
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
+.newclass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    color: yellow !important;
+}

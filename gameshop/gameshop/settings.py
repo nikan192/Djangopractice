@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     #my apps
     'games',
     'secondgames',
+    'create_pro',
 ]
 
 MIDDLEWARE = [
@@ -132,3 +133,4 @@ MEDIA_ROOT = BASE_DIR/'media'
 
 MEDIA_URL = '/media/'
 
+SUCCESS_URL = 'game'
