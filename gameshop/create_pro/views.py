@@ -25,7 +25,6 @@ class GameSpecialCreate(UpdateView) :
     pass
 
 
-
 class GameEdit(UpdateView) :
     model = Games
     template_name = 'edit-pro.html'

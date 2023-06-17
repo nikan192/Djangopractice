@@ -15,5 +15,9 @@ body{
     justify-content: center;
     align-items: center;
     margin: 30px;
-    color: yellow !important;
+}
+
+
+.navbar-custom {
+  background-color: #bdaa04; /* orange color */
 }

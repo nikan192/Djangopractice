@@ -1,10 +1,11 @@
 from django.db import models
 from django.utils import timezone
+from django.urls import reverse
 # Create your models here.
 
 class Games(models.Model) :
 
-    image = models.ImageField(upload_to='gamecovers/')
+    image = models.ImageField(upload_to='gamecovers/' , blank = True , null = True)
 
     name = models.CharField(max_length=24)
     
@@ -36,12 +37,15 @@ class Games(models.Model) :
         self.save()
         pass
 
+    def get_absolute_url(self):
+        return reverse("Gamepage", kwargs={"pk": self.id})
+
     pass
 
 
 class Special_Games(models.Model) :
 
-    image = models.ImageField(upload_to='gamecovers/')
+    image = models.ImageField(upload_to='gamecovers/' , blank = True , null = True)
 
     name = models.CharField(max_length=24)
     
@@ -70,5 +74,8 @@ class Special_Games(models.Model) :
         self.deleted_at = None
         self.save()
         pass
+
+    def get_absolute_url(self):
+        return reverse("Gamepage", kwargs={"pk": self.id})
 
     pass

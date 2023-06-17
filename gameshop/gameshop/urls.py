@@ -20,10 +20,10 @@ from django.conf import settings
 from django.urls import path , include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('games/' , include('games.urls')),
-    path('secondgames/' , include('secondgames.urls')),
-    path('pro_tool/' , include('create_pro.urls'))
+    path('admin/', admin.site.urls , name='AdminPanel'),
+    path('games/' , include('games.urls') ,name='Gameslist'),
+    path('secondgames/' , include('secondgames.urls') , name='Testpage'),
+    path('pro_tool/' , include('create_pro.urls') , name='ProductTool')
 ]
 
 urlpatterns += static(settings.MEDIA_URL , document_root=settings.MEDIA_ROOT) 

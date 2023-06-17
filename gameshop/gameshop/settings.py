@@ -133,4 +133,4 @@ MEDIA_ROOT = BASE_DIR/'media'
 
 MEDIA_URL = '/media/'
 
-SUCCESS_URL = 'game'
+SUCCESS_URL = 'games'
