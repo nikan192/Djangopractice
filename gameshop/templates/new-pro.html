@@ -3,7 +3,6 @@
 {% block content %}
 
 <form action="" method="post">
-
     <table class="newclass">
         {% csrf_token %}
         {{form.as_p}}
@@ -11,6 +10,5 @@
         <p></p>
     </div>
 </form>
-
 
 {% endblock content %}
