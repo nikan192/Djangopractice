@@ -21,8 +21,8 @@ from django.urls import path , include
 
 urlpatterns = [
     path('admin/', admin.site.urls , name='AdminPanel'),
-    path('games/' , include('games.urls') ,name='Gameslist'),
-    path('secondgames/' , include('secondgames.urls') , name='Testpage'),
+    path('games/' , include('games.urls') , name='GameList'),
+    path('secondgames/' , include('secondgames.urls') , name='TestPage'),
     path('pro_tool/' , include('create_pro.urls') , name='ProductTool')
 ]
 

@@ -4,7 +4,9 @@
         
         <div class="newclass">
         <div class="card" style="width: 18rem;">
-            <img src="{{ game.image.url }}" class="card-img-top" alt="{{ game.name }}">
+            {% if game.image %}
+              <img src="{{ game.image.url }}" class="card-img-top" alt="{{ game.name }}">
+            {% endif %}
             <div class="card-body">
               <h5 class="card-title"> اسم : {{game.name}}</h5>
               <p class="card-text"> توضیحات : {{game.description}}</p>
@@ -14,7 +16,9 @@
               <li class="list-group-item"> تاریخ پست : {{game.created_at}}</li>
             </ul>  
             <div class="card-body">
-            <button type="button" class="btn btn-primary"><a href="{% url 'Gamepage' game.id %}" style = "color :goldenrod">  {{game.name}} </a></button>
+            {% if game.id %}
+            <button type="button" class="btn btn-primary"><a href="{% url 'Gamepage' pk=game.pk %}" style = "color :goldenrod">  {{game.name}} </a></button>
+            {% endif %}
             <p></p>
             </div>
           </div>

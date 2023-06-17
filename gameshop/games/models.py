@@ -22,24 +22,8 @@ class Games(models.Model) :
     def __str__(self) -> str:
         return self.name
 
-    def delete(self , using = None , keep_parent = False) :
-        self.deleted_at = timezone.now()
-        self.save()
-        pass
-
-    def restore(self) :
-        self.deleted_at = None
-        self.save()
-        pass
-
-    def is_deleted(self) :
-        self.deleted_at = None
-        self.save()
-        pass
-
     def get_absolute_url(self):
         return reverse("Gamepage", kwargs={"pk": self.id})
-
     pass
 
 
@@ -60,20 +44,6 @@ class Special_Games(models.Model) :
     def __str__(self) -> str:
         return self.name
 
-    def delete(self , using = None , keep_parent = False) :
-        self.deleted_at = timezone.now()
-        self.save()
-        pass
-
-    def restore(self) :
-        self.deleted_at = None
-        self.save()
-        pass
-
-    def is_deleted(self) :
-        self.deleted_at = None
-        self.save()
-        pass
 
     def get_absolute_url(self):
         return reverse("Gamepage", kwargs={"pk": self.id})

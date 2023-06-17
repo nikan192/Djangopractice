@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 style = 'color :hsl(54, 96%, 38%);'>Are you sure ?</h1>
+<form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <br><br>
+       <input type="submit" value="Delete">
+    </div>
+</form>
+
+{% endblock content %}
