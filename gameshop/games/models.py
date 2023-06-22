@@ -24,6 +24,7 @@ class Games(models.Model) :
 
     def get_absolute_url(self):
         return reverse("Gamepage", kwargs={"pk": self.id})
+    
     pass
 
 
