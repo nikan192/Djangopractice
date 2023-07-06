@@ -16,14 +16,14 @@ class shop_view(ListView) :
     
 class pro_detail_game(DetailView) :
     model = Games
-    template_name = 'mobilelist.html'
+    template_name : str = 'mobilelist.html'
     context_object_name : str = 'game_d'
     pass
 
 
 class spec_detail(DetailView) :
     model = Special_Games
-    template_name = 'mobilelist.html'
+    template_name : str = 'mobilelist.html'
     context_object_name : str = 'detail_special'
     pass
 
